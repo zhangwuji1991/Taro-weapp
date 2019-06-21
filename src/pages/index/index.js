@@ -5,6 +5,7 @@ import { AtButton,AtAccordion, AtList, AtListItem ,AtMessage } from 'taro-ui'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
 import Header from '../../compontens/header/index'
+import Clock from '../../compontens/clock/index'
 
 import './index.scss'
 
@@ -74,6 +75,7 @@ class Index extends Component {
     return (
       <View className='index'>
         <Header name="Wallace" />
+        <Clock></Clock>
         <Button className='add_btn' onClick={this.props.add}>+</Button>
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
