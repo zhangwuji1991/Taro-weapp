@@ -12,6 +12,9 @@ class Test extends Component {
       url: '/pages/index/index'
     })
   }
+  config = {
+    navigationBarTitleText: 'test'
+  }
   render () {
     return (
       <View className='index'>

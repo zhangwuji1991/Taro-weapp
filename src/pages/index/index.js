@@ -4,6 +4,7 @@ import { connect } from '@tarojs/redux'
 import { AtButton,AtAccordion, AtList, AtListItem ,AtMessage } from 'taro-ui'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
+import Header from '../../compontens/header/index'
 
 import './index.scss'
 
@@ -72,6 +73,7 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
+        <Header name="Wallace" />
         <Button className='add_btn' onClick={this.props.add}>+</Button>
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
@@ -130,15 +132,6 @@ class Index extends Component {
         <AtMessage />
         <AtButton onClick={this.handleClick.bind(this)}>
           普通消息
-        </AtButton>
-        <AtButton onClick={this.handleClick.bind(this, 'success')}>
-          成功消息
-        </AtButton>
-        <AtButton onClick={this.handleClick.bind(this, 'error')}>
-          错误消息
-        </AtButton>
-        <AtButton onClick={this.handleClick.bind(this, 'warning')}>
-          警告消息
         </AtButton>
       </View>
         
